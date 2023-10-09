@@ -34,10 +34,6 @@ const Page = () => {
       />
 
       <button className="btn" onClick={handleBtn}>Search</button>
-
-      if ({users.length > 0}) {
-        
-      }
       
       {users &&
         <div>
