@@ -35,8 +35,20 @@ const Page = () => {
 
       <button className="btn" onClick={handleBtn}>Search</button>
 
-      {users} ? <div><h2>{users?.name}</h2><img src={users?.avatar_url} alt="" /></div> : 
-      <div><h2>"Usuário não encontrado!"</h2></div>
+      if ({users.length > 0}) {
+        
+      }
+      
+      {users &&
+        <div>
+          <h2>{users?.name}</h2>
+          <img src={users?.avatar_url} alt="" />
+        </div>
+      }
+
+      {!users &&
+        <h2>Usuário não encontrado!</h2>
+      }
       
     </main>
    );
