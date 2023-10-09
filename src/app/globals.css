@@ -14,11 +14,8 @@ body {
 
 p{
   text-align: center;
-
   font-size: 14px;
-  
   color: #9da5d1;
-
 }
 
 a{
@@ -32,7 +29,6 @@ section{
   margin: 0 auto;
   margin-top: 3rem;
 
-  /* border: 1px solid #fff; */
   border-radius: 1rem;
   background-color: #2b3566;
   box-shadow: 0px 5px 10px #2b3566;
@@ -50,9 +46,7 @@ section:hover{
   transform: scale(1.01);
 }
 
-.search-container{
-  /* border: 1px solid #fff; */
-  
+.search-container{  
   width: 80%;
   height: 150px;
   
@@ -110,6 +104,8 @@ section:hover{
   background-color: #2b3566;
   box-shadow: 0px 5px 10px #2b3566;
 
+  z-index: 100;
+
   transition: all 0.3s;
 }
 
@@ -156,7 +152,6 @@ button{
   border: none;
 
   margin-left: 0.25rem;
-  /* margin-left: -3.75rem; */
 }
 
 /* USER SECTION */
@@ -213,13 +208,15 @@ button{
 .counter-follow{
   background: #fff;
   color: #2b3566;
+  border-radius: 0.25rem;
+
   padding: 0.25rem;
   margin-top: 0.5rem;
-  border-radius: 0.25rem;
 }
 
 .vertical-line{
   width: 2px;
   height: 40px;
+
   background-color: #fff;
 }

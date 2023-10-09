@@ -2,7 +2,6 @@
 
 import { useEffect, useState, KeyboardEvent } from "react";
 import { json } from "stream/consumers";
-import { Validation } from "@/components/validation";
 
 const Page = () => {
 
@@ -16,20 +15,12 @@ const Page = () => {
   }
   
   const handleFetch = async () => {
-
-    try {
       const url = fetch(`https://api.github.com/users/${data}`)
       const res = await url
       const json = await res.json()
-
-      // console.log(json);
-      setMessage(json.status);
+      setMessage(json.message);
       setUsers(json)
-
-    } catch (message) {
-      
-    }
-
+      console.log(message);
   }
 
   const handleGetUsers = () => {
@@ -45,7 +36,6 @@ const Page = () => {
 
   return (
     <main>
-
       {/* SEARCH SECTION */}
       <section className="search-section">
         <div className="search-container">
@@ -93,10 +83,14 @@ const Page = () => {
                   <p className="counter-follow">{users?.following}0</p>
                 </span>
               </div>
-    
             </div>
           </section>) : ("")}
 
+          {message == "Not Found" && 
+              (<div className="errorMessage">
+                <p>User Not Found</p>
+              </div>)
+          }
     </main>
    );
 }
