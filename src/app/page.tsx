@@ -34,12 +34,13 @@ const Page = () => {
       />
 
       <button className="btn" onClick={handleBtn}>Search</button>
-      
+
+      {users} ? 
       <div>
         <h2>{users?.name}</h2>
         <img src={users?.avatar_url} alt="" />
-
-      </div>
+      </div> : "Usuário não encontrado!"
+      
     </main>
    );
 }
